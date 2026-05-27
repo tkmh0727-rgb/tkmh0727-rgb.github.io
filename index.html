@@ -6,6 +6,23 @@
   <meta name="description" content="Myeonghyeon Kim - Academic CV and research portfolio" />
   <title>Myeonghyeon Kim | Academic Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero { grid-template-columns: minmax(0, 1.15fr) 390px; gap: 56px; min-height: 78vh; }
+    .hero h1 { max-width: 780px; font-size: clamp(3.1rem, 7vw, 5.6rem); }
+    .hero .lead { max-width: 690px; font-size: 1.18rem; }
+    .profile-photo-card { overflow: hidden; padding: 0; }
+    .profile-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+    .profile-caption { padding: 24px 26px 28px; }
+    .profile-caption h2 { margin: 0 0 6px; font-size: 1.6rem; }
+    .profile-caption p { margin: 4px 0; color: var(--muted); }
+    .section-intro { max-width: 760px; color: var(--muted); font-size: 1.05rem; margin-top: 12px; }
+    .project-grid { grid-template-columns: repeat(3, 1fr); }
+    .publication.compact-publication { box-shadow: none; border-radius: 22px; padding: 24px; }
+    .contact-panel { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: start; }
+    .contact-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .contact-links a { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: var(--surface); font-weight: 700; }
+    @media (max-width: 960px) { .hero, .contact-panel, .project-grid { grid-template-columns: 1fr; } .profile-photo-card { max-width: 460px; } }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -13,10 +30,9 @@
       <a class="brand" href="#top">Myeonghyeon Kim</a>
       <div class="nav-links">
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
         <a href="achievements.html">Achievements</a>
-        <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -26,74 +42,79 @@
     <section class="hero section">
       <div class="hero-content">
         <p class="eyebrow">M.S. Student · KAIST Mobility</p>
-        <h1>Autonomous Mobility, Communication-Aware Navigation, and Intersection Intelligence</h1>
+        <h1>Safe Robot Navigation at Signalized Intersections</h1>
         <p class="lead">
-          I am Myeonghyeon Kim, a master's student at KAIST Cho Chun Shik Graduate School of Mobility.
-          My work focuses on safe navigation for autonomous mobile robots and intelligent transportation
-          systems, especially at signalized crosswalks where perception, communication, and decision-making
-          must operate together.
+          I am Myeonghyeon Kim, a master's student at KAIST working on autonomous mobile robot navigation
+          in urban intersection environments. My research focuses on SPaT/R2X-assisted crosswalk navigation,
+          ROS 2-based safety systems, and vision-language model applications for intersection understanding.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">View Research Projects</a>
-          <a class="button" href="achievements.html">View Achievements</a>
+          <a class="button primary" href="#projects">Explore Research</a>
+          <a class="button" href="#cv">View CV</a>
+          <a class="button" href="achievements.html">Achievements</a>
         </div>
       </div>
-      <aside class="profile-card">
-        <div class="avatar">MK</div>
-        <h2>Myeonghyeon Kim</h2>
-        <p>Master's Student</p>
-        <p>Cho Chun Shik Graduate School of Mobility, KAIST</p>
-        <div class="profile-links">
-          <a href="https://github.com/tkmh0727-rgb">GitHub</a>
-          <a href="mailto:tkmh0727@gmail.com">Email</a>
+
+      <aside class="profile-card profile-photo-card">
+        <img class="profile-photo" src="assets/profile.svg" alt="Myeonghyeon Kim profile photo" />
+        <div class="profile-caption">
+          <h2>Myeonghyeon Kim</h2>
+          <p>Master's Student</p>
+          <p>Cho Chun Shik Graduate School of Mobility, KAIST</p>
+          <div class="profile-links">
+            <a href="https://github.com/tkmh0727-rgb">GitHub</a>
+            <a href="mailto:tkmh0727@gmail.com">Email</a>
+          </div>
         </div>
       </aside>
     </section>
 
-    <section class="section compact">
-      <div class="stat-grid">
-        <article class="stat-card">
-          <strong>Research Area</strong>
-          <span>AMR navigation at signalized crosswalks</span>
+    <section id="research" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">Research Focus</p>
+        <h2>What I Work On</h2>
+        <p class="section-intro">
+          My work connects intelligent transportation systems and robotic navigation, with an emphasis on
+          crosswalk safety, communication-aware decision making, and real-world mobile robot deployment.
+        </p>
+      </div>
+      <div class="grid three">
+        <article class="card">
+          <h3>SPaT/R2X-based Navigation</h3>
+          <p>Communication-assisted crosswalk navigation for autonomous mobile robots using Signal Phase and Timing information.</p>
         </article>
-        <article class="stat-card">
-          <strong>System Stack</strong>
-          <span>ROS 2, Nav2, LiDAR, camera, SPaT/R2X</span>
+        <article class="card">
+          <h3>ROS 2 / Nav2 Safety Systems</h3>
+          <p>Integration of navigation, localization, signal awareness, and obstacle handling in a unified ROS 2-based safety framework.</p>
         </article>
-        <article class="stat-card">
-          <strong>Emerging Direction</strong>
-          <span>VLM-based intersection context understanding</span>
+        <article class="card">
+          <h3>VLM-based Intersection Understanding</h3>
+          <p>Using vision-language models to interpret pedestrians, vehicles, occlusions, and scene context in intersection environments.</p>
         </article>
       </div>
     </section>
 
-    <section id="research" class="section">
+    <section id="projects" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Research</p>
-        <h2>Research Themes</h2>
+        <p class="eyebrow">Selected Projects</p>
+        <h2>Representative Research Projects</h2>
+        <p class="section-intro">The projects below summarize the main technical direction of my current portfolio.</p>
       </div>
-      <div class="grid three">
-        <article class="card">
-          <h3>SPaT/R2X-based Crosswalk Navigation</h3>
-          <p>
-            I develop communication-assisted navigation frameworks for autonomous mobile robots at
-            signalized crosswalks. The goal is to use Signal Phase and Timing information to decide
-            whether a robot can safely enter, wait, or stop before crossing.
-          </p>
+      <div class="grid project-grid">
+        <article class="card project">
+          <h3>SPaT-Assisted AMR Crosswalk Navigation</h3>
+          <p>A ROS 2-based framework integrating Nav2, SPaT/R2X messages, and a hybrid safety node for signal-aware AMR crossing.</p>
+          <p class="meta">ROS 2 · Nav2 · SPaT · R2X · AMR</p>
         </article>
-        <article class="card">
-          <h3>Hybrid Safety Control with ROS 2/Nav2</h3>
-          <p>
-            I build ROS 2-based navigation pipelines that combine Nav2 commands, signal state,
-            remaining phase time, localization, and obstacle information through a centralized safety layer.
-          </p>
+        <article class="card project">
+          <h3>Multi-Camera Pedestrian Trajectory Perception</h3>
+          <p>A perception pipeline combining YOLO, DeepSORT, Re-ID, and Homography Transform for full pedestrian trajectory recovery.</p>
+          <p class="meta">YOLO · DeepSORT · Re-ID · Homography</p>
         </article>
-        <article class="card">
-          <h3>VLM-based Intersection Understanding</h3>
-          <p>
-            I am extending my crosswalk navigation research toward vision-language models that can
-            reason about pedestrians, vehicles, occlusions, and potential conflicts from intersection camera images.
-          </p>
+        <article class="card project">
+          <h3>CARLA-based Intersection Scenario Generation</h3>
+          <p>A simulation pipeline for collecting intersection scenes, traffic actors, camera data, and metadata for VLM evaluation.</p>
+          <p class="meta">CARLA · Simulation · VLM Evaluation</p>
         </article>
       </div>
     </section>
@@ -104,116 +125,35 @@
         <h2>Selected Publications & Posters</h2>
       </div>
       <div class="publication-list">
-        <article class="publication">
+        <article class="publication compact-publication">
           <h3>Time-Aware Crosswalk Navigation for Autonomous Mobile Robots Using SPaT-Based R2X Communication</h3>
-          <p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim.</p>
-          <p>IEEE ITSC 2026 Late-Breaking Results Poster, Naples, Italy, 2026. Accepted.</p>
-          <div class="tags">
-            <span>AMR</span><span>SPaT</span><span>R2X</span><span>Crosswalk Navigation</span><span>Nav2</span>
-          </div>
+          <p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim. IEEE ITSC 2026 Late-Breaking Results Poster, accepted.</p>
         </article>
-        <article class="publication">
+        <article class="publication compact-publication">
           <h3>Multi-Camera Pedestrian Full Trajectory Perception Using YOLO, DeepSORT, and Homography Transform</h3>
-          <p><strong>Myeonghyeon Kim</strong>, Inhi Kim.</p>
-          <p>ITS Asia-Pacific 2025 submission. Focused on multi-camera pedestrian trajectory perception and cross-camera ID consistency.</p>
-          <div class="tags">
-            <span>YOLO</span><span>DeepSORT</span><span>Homography</span><span>Pedestrian Trajectory</span>
-          </div>
+          <p><strong>Myeonghyeon Kim</strong>, Inhi Kim. ITS Asia-Pacific 2025 submission.</p>
         </article>
-        <article class="publication">
-          <h3>Analysis of C-ITS Scenarios for Blind Spot Incidents at Intersections Using V2X Communication-Based Field Experiment</h3>
+        <article class="publication compact-publication">
+          <h3>V2X Communication-Based Field Experiment for Intersection Blind-Spot C-ITS Scenarios</h3>
           <p>Co-author, Journal of Korean Society of Intelligent Transport Systems, 2024.</p>
-          <p>Contributed to field experiment design and GNSS-based trajectory data collection and analysis for V2X-based C-ITS scenarios.</p>
-          <div class="tags">
-            <span>V2X</span><span>C-ITS</span><span>Intersection Safety</span><span>Field Experiment</span>
-          </div>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section class="section">
       <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Research Projects</h2>
-      </div>
-      <div class="grid two">
-        <article class="card project">
-          <h3>SPaT-Assisted AMR Crosswalk Navigation</h3>
-          <p>
-            A ROS 2-based framework that integrates Nav2, R2X/SPaT messages, and a hybrid safety node
-            for signal-aware robot crossing. The system compares vision-only signal interpretation with
-            communication-assisted SPaT decisions under challenging outdoor conditions.
-          </p>
-          <p class="meta">ROS 2 · Nav2 · SPaT · R2X · AMR · Crosswalk Safety</p>
-        </article>
-        <article class="card project">
-          <h3>Traffic Light Perception for Mobile Robots</h3>
-          <p>
-            A perception pipeline for traffic signal recognition using RGB images, YOLO-based detection,
-            color-state classification, and temporal smoothing. The module is designed to interface with
-            the same navigation and safety layer used by the SPaT-based system.
-          </p>
-          <p class="meta">YOLO · RGB Camera · Traffic Signal Recognition · ROS 2</p>
-        </article>
-        <article class="card project">
-          <h3>CARLA-based Intersection Scenario Generation</h3>
-          <p>
-            A simulation pipeline for generating intersection scenes with pedestrians, vehicles, cameras,
-            and scenario metadata. This direction supports future VLM evaluation for infrastructure-based
-            intersection understanding.
-          </p>
-          <p class="meta">CARLA · Simulation · Data Collection · VLM Evaluation</p>
-        </article>
-        <article class="card project">
-          <h3>LiDAR-based Robot Navigation with Fast-LIO2 and Nav2</h3>
-          <p>
-            Integration of LiDAR SLAM and navigation components for mobile robot localization, mapping,
-            and autonomous navigation. This work supports real-world AMR operation with LiDAR-camera platforms.
-          </p>
-          <p class="meta">Fast-LIO2 · LiDAR · ROS 2 · SLAM · Nav2</p>
-        </article>
-        <article class="card project">
-          <h3>Multi-Camera Pedestrian Trajectory Perception</h3>
-          <p>
-            A perception pipeline that combines YOLO, DeepSORT, Re-ID, and Homography Transform to improve
-            cross-camera pedestrian ID consistency and recover full pedestrian trajectories across camera views.
-          </p>
-          <p class="meta">YOLO · DeepSORT · Re-ID · Homography · ITS</p>
-        </article>
-        <article class="card project">
-          <h3>Face Recognition-based Automatic Door Control</h3>
-          <p>
-            A KIST internship project that used motion detection, RetinaFace, and WebSocket communication
-            to develop a face recognition-based access control prototype for automatic door operation.
-          </p>
-          <p class="meta">RetinaFace · GMM · WebSocket · Access Control · KIST</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section muted">
-      <div class="section-heading">
-        <p class="eyebrow">Achievements</p>
-        <h2>Selected Highlights</h2>
+        <p class="eyebrow">Highlights</p>
+        <h2>Selected Achievements</h2>
       </div>
       <div class="grid three">
-        <article class="card">
-          <h3>KSME Capstone Design Grand Prize</h3>
-          <p>Grand Prize for a deep learning-based abnormal vehicle detection and warning system.</p>
-        </article>
-        <article class="card">
-          <h3>Cloud Programming World Cup 1st Award</h3>
-          <p>Built a traffic accident prediction model using UC-win/Road, anomaly detection, and driver gaze recognition.</p>
-        </article>
-        <article class="card">
-          <h3>KIISE Undergraduate Paper Award</h3>
-          <p>Encouragement Award for abnormal vehicle and driver behavior detection using vision systems and deep neural networks.</p>
-        </article>
+        <article class="card"><h3>KSME Capstone Design Grand Prize</h3><p>Grand Prize for a deep learning-based abnormal vehicle detection and warning system.</p></article>
+        <article class="card"><h3>Cloud Programming World Cup 1st Award</h3><p>Built a traffic accident prediction model using UC-win/Road, anomaly detection, and driver gaze recognition.</p></article>
+        <article class="card"><h3>KIISE Undergraduate Paper Award</h3><p>Encouragement Award for abnormal vehicle and driver behavior detection using vision systems and deep neural networks.</p></article>
       </div>
-      <p class="note"><a href="achievements.html">Open the full achievements page →</a></p>
+      <p class="note"><a href="achievements.html">See full achievements →</a></p>
     </section>
 
-    <section id="cv" class="section">
+    <section id="cv" class="section muted">
       <div class="section-heading">
         <p class="eyebrow">CV</p>
         <h2>Curriculum Vitae</h2>
@@ -232,27 +172,29 @@
             <li>Robotics: ROS 2, Nav2, SLAM, LiDAR-camera systems, mobile robot navigation</li>
             <li>Simulation: CARLA, Unity, digital twin environments, scenario generation</li>
             <li>Programming: Python, C++, MATLAB, LaTeX</li>
-            <li>Perception/AI: YOLO, DeepSORT, Homography Transform, VLMs, sensor fusion, traffic signal recognition</li>
+            <li>Perception/AI: YOLO, DeepSORT, Homography Transform, VLMs, sensor fusion</li>
           </ul>
         </div>
       </div>
       <p class="note">PDF CV can be added later as <code>cv.pdf</code> and linked from this section.</p>
     </section>
 
-    <section id="contact" class="section contact muted">
-      <div class="section-heading">
-        <p class="eyebrow">Contact</p>
-        <h2>Get in Touch</h2>
+    <section id="contact" class="section">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Get in Touch</h2>
+          <p class="section-intro">I am interested in autonomous mobile robots, intelligent transportation systems, communication-assisted navigation, and infrastructure-based scene understanding.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:tkmh0727@gmail.com">Email</a>
+          <a href="https://github.com/tkmh0727-rgb">GitHub</a>
+          <a href="achievements.html">Achievements</a>
+        </div>
       </div>
-      <p>
-        Email: <a href="mailto:tkmh0727@gmail.com">tkmh0727@gmail.com</a><br />
-        GitHub: <a href="https://github.com/tkmh0727-rgb">github.com/tkmh0727-rgb</a>
-      </p>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© 2026 Myeonghyeon Kim. Built with GitHub Pages.</p>
-  </footer>
+  <footer class="footer"><p>© 2026 Myeonghyeon Kim. Built with GitHub Pages.</p></footer>
 </body>
 </html>
