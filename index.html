@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Myeonghyeon Kim - Academic CV and research portfolio" />
+  <title>Myeonghyeon Kim</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top">Myeonghyeon Kim</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">M.S. Student · KAIST Mobility</p>
+        <h1>Myeonghyeon Kim</h1>
+        <p class="lead">
+          I study autonomous mobile robot navigation at signalized intersections, with a focus on
+          R2X/SPaT communication, ROS 2-based navigation, and vision-language models for
+          intersection-level scene understanding.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#cv">View CV</a>
+          <a class="button" href="#projects">View Projects</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="avatar">MK</div>
+        <h2>Myeonghyeon Kim</h2>
+        <p>Master's Student</p>
+        <p>Cho Chun Shik Graduate School of Mobility, KAIST</p>
+        <div class="profile-links">
+          <a href="https://github.com/tkmh0727-rgb">GitHub</a>
+          <a href="mailto:tkmh0727@gmail.com">Email</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="research" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Research</p>
+        <h2>Research Interests</h2>
+      </div>
+      <div class="grid three">
+        <article class="card">
+          <h3>SPaT/R2X-based AMR Navigation</h3>
+          <p>
+            Communication-assisted navigation for autonomous mobile robots at signalized crosswalks,
+            using Signal Phase and Timing information to support time-aware crossing decisions.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Vision-Language Models for Intersections</h3>
+          <p>
+            Applying VLMs to understand intersection context, including pedestrians, vehicles,
+            occlusions, and potential conflicts around crosswalk environments.
+          </p>
+        </article>
+        <article class="card">
+          <h3>ROS 2-based Robotic Systems</h3>
+          <p>
+            Building navigation and safety-control pipelines with ROS 2, Nav2, LiDAR-camera systems,
+            and simulation environments such as CARLA.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">Publications</p>
+        <h2>Selected Publications & Posters</h2>
+      </div>
+      <div class="publication-list">
+        <article class="publication">
+          <h3>Time-Aware Crosswalk Navigation for Autonomous Mobile Robots Using SPaT-Based R2X Communication</h3>
+          <p><strong>Myeonghyeon Kim</strong>, et al.</p>
+          <p>IEEE ITSC 2026 Late-Breaking Results Poster, Naples, Italy, 2026. Accepted.</p>
+          <div class="tags">
+            <span>AMR</span><span>SPaT</span><span>R2X</span><span>Crosswalk Navigation</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Research Projects</h2>
+      </div>
+      <div class="grid two">
+        <article class="card project">
+          <h3>SPaT-Assisted AMR Crosswalk Navigation</h3>
+          <p>
+            A ROS 2-based navigation framework that integrates Nav2, R2X/SPaT messages, and a hybrid
+            safety node for signal-aware mobile robot crossing at urban intersections.
+          </p>
+          <p class="meta">ROS 2 · Nav2 · SPaT · R2X · AMR</p>
+        </article>
+        <article class="card project">
+          <h3>VLM-based Intersection Context Understanding</h3>
+          <p>
+            A research direction for using intersection camera images and VLM reasoning to capture
+            crosswalk-level context beyond traffic signal state alone.
+          </p>
+          <p class="meta">VLM · Scene Understanding · Crosswalk · Safety</p>
+        </article>
+        <article class="card project">
+          <h3>CARLA-based Intersection Scenario Generation</h3>
+          <p>
+            Simulation pipeline for collecting intersection images, traffic scenarios, pedestrians,
+            vehicles, and metadata for downstream VLM evaluation.
+          </p>
+          <p class="meta">CARLA · Simulation · Data Collection · VLM Evaluation</p>
+        </article>
+        <article class="card project">
+          <h3>LiDAR-based Robot Navigation with Fast-LIO2 and Nav2</h3>
+          <p>
+            Integration of LiDAR SLAM and ROS 2 navigation components for mobile robot localization,
+            mapping, and autonomous navigation.
+          </p>
+          <p class="meta">Fast-LIO2 · LiDAR · ROS 2 · SLAM · Nav2</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cv" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">CV</p>
+        <h2>Curriculum Vitae</h2>
+      </div>
+      <div class="cv-grid">
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li><strong>KAIST</strong>, M.S. Student, Cho Chun Shik Graduate School of Mobility</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Robotics: ROS 2, Nav2, SLAM, LiDAR-camera systems</li>
+            <li>Simulation: CARLA, Unity, digital twin environments</li>
+            <li>Programming: Python, C++, MATLAB, LaTeX</li>
+            <li>Perception/AI: YOLO, VLMs, sensor fusion, traffic signal recognition</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">PDF CV can be added later as <code>cv.pdf</code> and linked from this section.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in Touch</h2>
+      </div>
+      <p>
+        Email: <a href="mailto:tkmh0727@gmail.com">tkmh0727@gmail.com</a><br />
+        GitHub: <a href="https://github.com/tkmh0727-rgb">github.com/tkmh0727-rgb</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Myeonghyeon Kim. Built with GitHub Pages.</p>
+  </footer>
+</body>
+</html>
