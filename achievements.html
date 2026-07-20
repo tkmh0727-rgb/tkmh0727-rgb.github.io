@@ -6,6 +6,71 @@
   <meta name="description" content="Myeonghyeon Kim - Achievements, awards, publications, and projects" />
   <title>Achievements | Myeonghyeon Kim</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .poster-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .poster-preview {
+      min-height: 260px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 55%, #eef2f7 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .poster-preview .type {
+      display: inline-flex;
+      align-self: flex-start;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .poster-preview .preview-title {
+      margin: 28px 0 0;
+      font-size: 1.55rem;
+      line-height: 1.16;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    .poster-body {
+      padding: 26px;
+    }
+
+    .poster-body p {
+      color: var(--muted);
+    }
+
+    .poster-meta {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    @media (max-width: 960px) {
+      .poster-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -15,6 +80,7 @@
         <a href="index.html#research">Research</a>
         <a href="index.html#publications">Publications</a>
         <a href="index.html#projects">Projects</a>
+        <a href="#posters">Posters</a>
         <a href="achievements.html">Achievements</a>
         <a href="index.html#contact">Contact</a>
       </div>
@@ -45,7 +111,7 @@
           <span>Major competition / paper awards</span>
         </article>
         <article class="stat-card">
-          <strong>4+</strong>
+          <strong>7+</strong>
           <span>ITS / mobility research outputs</span>
         </article>
         <article class="stat-card">
@@ -141,6 +207,60 @@
           <h3>Development of Driver's Gaze Object Detection System</h3>
           <p>Conference proceedings paper, KIISE, 2022.</p>
           <p>Developed a system for identifying objects of driver attention using gaze and head pose-related data collection.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="posters" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Posters & Manuscripts</p>
+        <h2>Recent Research Materials</h2>
+        <p class="note">Selected poster and manuscript materials related to R2X/SPaT-based autonomous mobile robot navigation.</p>
+      </div>
+      <div class="poster-grid">
+        <article class="card poster-card">
+          <div class="poster-preview">
+            <span class="type">Poster</span>
+            <p class="preview-title">R2X-Based Robust Navigation System for AMRs in Urban Intersections</p>
+          </div>
+          <div class="poster-body">
+            <h3>2026 Korean ITS Spring Conference Poster</h3>
+            <p>
+              Presents an R2X/SPaT-based navigation framework for autonomous mobile robots at signalized crosswalks,
+              comparing vision-based and SPaT-based decision making under normal, illumination-changing, and occlusion scenarios.
+            </p>
+            <p class="poster-meta">R2X · SPaT · AMR · Crosswalk Navigation · Korean ITS</p>
+          </div>
+        </article>
+
+        <article class="card poster-card">
+          <div class="poster-preview">
+            <span class="type">Manuscript</span>
+            <p class="preview-title">SPaT-Driven Robust Crosswalk Navigation for Autonomous Mobile Robots</p>
+          </div>
+          <div class="poster-body">
+            <h3>SPaT-Driven Robust Crosswalk Navigation</h3>
+            <p>
+              Defines signalized crosswalk traversal as a time-constrained decision problem and uses SPaT remaining-time information
+              with a Time-to-Cross criterion to improve signal-compliant AMR crossing decisions.
+            </p>
+            <p class="poster-meta">SPaT · TTC · R2X · Pedestrian Signal · AMR</p>
+          </div>
+        </article>
+
+        <article class="card poster-card">
+          <div class="poster-preview">
+            <span class="type">Manuscript</span>
+            <p class="preview-title">R2X-Based Robust Navigation System for Autonomous Mobile Robots</p>
+          </div>
+          <div class="poster-body">
+            <h3>R2X-Based Robust Navigation System</h3>
+            <p>
+              Describes an R2X communication-based AMR navigation system that leverages SPaT information to support robust,
+              predictive, and signal-aware crossing decisions in urban intersection environments.
+            </p>
+            <p class="poster-meta">R2X · Robust Navigation · Urban Intersections · ITS</p>
+          </div>
         </article>
       </div>
     </section>
