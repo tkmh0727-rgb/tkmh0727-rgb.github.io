@@ -8,20 +8,24 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .hero { grid-template-columns: minmax(0, 1.15fr) 390px; gap: 56px; min-height: 78vh; }
-    .hero h1 { max-width: 780px; font-size: clamp(3.1rem, 7vw, 5.6rem); }
-    .hero .lead { max-width: 690px; font-size: 1.18rem; }
+    .hero h1 { max-width: 820px; font-size: clamp(3.0rem, 7vw, 5.45rem); }
+    .hero .lead { max-width: 720px; font-size: 1.18rem; }
     .profile-photo-card { overflow: hidden; padding: 0; }
     .profile-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
     .profile-caption { padding: 24px 26px 28px; }
     .profile-caption h2 { margin: 0 0 6px; font-size: 1.6rem; }
     .profile-caption p { margin: 4px 0; color: var(--muted); }
-    .section-intro { max-width: 760px; color: var(--muted); font-size: 1.05rem; margin-top: 12px; }
+    .section-intro { max-width: 800px; color: var(--muted); font-size: 1.05rem; margin-top: 12px; }
     .project-grid { grid-template-columns: repeat(3, 1fr); }
+    .current-grid { grid-template-columns: repeat(4, 1fr); }
+    .current-card strong { display: block; color: var(--accent); margin-bottom: 8px; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.08em; }
     .publication.compact-publication { box-shadow: none; border-radius: 22px; padding: 24px; }
     .contact-panel { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: start; }
     .contact-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
     .contact-links a { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; background: var(--surface); font-weight: 700; }
+    @media (max-width: 1060px) { .current-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 960px) { .hero, .contact-panel, .project-grid { grid-template-columns: 1fr; } .profile-photo-card { max-width: 460px; } }
+    @media (max-width: 620px) { .current-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -30,6 +34,7 @@
       <a class="brand" href="#top">Myeonghyeon Kim</a>
       <div class="nav-links">
         <a href="#research">Research</a>
+        <a href="#current">Current Work</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="achievements.html">Achievements</a>
@@ -42,11 +47,12 @@
     <section class="hero section">
       <div class="hero-content">
         <p class="eyebrow">M.S. Student · KAIST Mobility</p>
-        <h1>Safe Robot Navigation at Signalized Intersections</h1>
+        <h1>Autonomous Mobile Robot Navigation for Intelligent Intersections</h1>
         <p class="lead">
           I am Myeonghyeon Kim, a master's student at KAIST working on autonomous mobile robot navigation
           in urban intersection environments. My research focuses on SPaT/R2X-assisted crosswalk navigation,
-          ROS 2-based safety systems, and vision-language model applications for intersection understanding.
+          ROS 2-based robotic systems, LiDAR-based navigation, and vision-language model applications for
+          infrastructure-aware intersection understanding.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">Explore Research</a>
@@ -63,7 +69,7 @@
           <p>Cho Chun Shik Graduate School of Mobility, KAIST</p>
           <div class="profile-links">
             <a href="https://github.com/tkmh0727-rgb">GitHub</a>
-            <a href="mailto:tkmh0727@gmail.com">Email</a>
+            <a href="mailto:tkmh0727@kaist.ac.kr">Email</a>
           </div>
         </div>
       </aside>
@@ -94,6 +100,39 @@
       </div>
     </section>
 
+    <section id="current" class="section compact">
+      <div class="section-heading">
+        <p class="eyebrow">Current Work</p>
+        <h2>Recent Research Progress</h2>
+        <p class="section-intro">
+          Recent work centers on turning crosswalk navigation into a deployable robotic system: from real-world R2X/SPaT experiments
+          to simulation-based validation and LiDAR-driven autonomous navigation.
+        </p>
+      </div>
+      <div class="grid current-grid">
+        <article class="card current-card">
+          <strong>ITSC 2026</strong>
+          <h3>SPaT/R2X AMR Crosswalk Navigation</h3>
+          <p>Developed a time-aware AMR crossing framework using SPaT remaining-time information and a Time-to-Cross decision rule.</p>
+        </article>
+        <article class="card current-card">
+          <strong>Robotics System</strong>
+          <h3>Delivery Robot ROS 2 Integration</h3>
+          <p>Built a Delivery Robot simulation and integration pipeline with LiDAR, IMU, camera, odometry, joint states, and ROS 2 topics.</p>
+        </article>
+        <article class="card current-card">
+          <strong>SLAM / Navigation</strong>
+          <h3>Fast-LIO2 and Nav2 Pipeline</h3>
+          <p>Configured LiDAR-based SLAM and navigation components to support map generation, localization, and autonomous driving tests.</p>
+        </article>
+        <article class="card current-card">
+          <strong>Simulation / AI</strong>
+          <h3>Isaac Sim and VLM Scenarios</h3>
+          <p>Extending intersection scenarios in simulation for future infrastructure-camera and VLM-based scene understanding research.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="projects" class="section">
       <div class="section-heading">
         <p class="eyebrow">Selected Projects</p>
@@ -107,6 +146,16 @@
           <p class="meta">ROS 2 · Nav2 · SPaT · R2X · AMR</p>
         </article>
         <article class="card project">
+          <h3>LiDAR-based Robot Navigation with Fast-LIO2 and Nav2</h3>
+          <p>Integration of LiDAR SLAM, mapping, localization, and Nav2-based navigation for mobile robot operation.</p>
+          <p class="meta">Fast-LIO2 · LiDAR · SLAM · Nav2 · ROS 2</p>
+        </article>
+        <article class="card project">
+          <h3>Isaac Sim-based Delivery Robot Digital Twin</h3>
+          <p>Simulation environment for Delivery Robot sensing, ROS 2 communication, LiDAR/IMU/camera configuration, and scenario validation.</p>
+          <p class="meta">Isaac Sim · ROS 2 · LiDAR · Camera · Digital Twin</p>
+        </article>
+        <article class="card project">
           <h3>Multi-Camera Pedestrian Trajectory Perception</h3>
           <p>A perception pipeline combining YOLO, DeepSORT, Re-ID, and Homography Transform for full pedestrian trajectory recovery.</p>
           <p class="meta">YOLO · DeepSORT · Re-ID · Homography</p>
@@ -115,6 +164,11 @@
           <h3>CARLA-based Intersection Scenario Generation</h3>
           <p>A simulation pipeline for collecting intersection scenes, traffic actors, camera data, and metadata for VLM evaluation.</p>
           <p class="meta">CARLA · Simulation · VLM Evaluation</p>
+        </article>
+        <article class="card project">
+          <h3>Traffic Light Perception for Mobile Robots</h3>
+          <p>Vision-based traffic signal recognition using object detection, color-state classification, and temporal smoothing for robot navigation.</p>
+          <p class="meta">YOLO · RGB Camera · Traffic Signal Recognition · ROS 2</p>
         </article>
       </div>
     </section>
@@ -128,6 +182,10 @@
         <article class="publication compact-publication">
           <h3>Time-Aware Crosswalk Navigation for Autonomous Mobile Robots Using SPaT-Based R2X Communication</h3>
           <p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim. IEEE ITSC 2026 Late-Breaking Results Poster, accepted.</p>
+        </article>
+        <article class="publication compact-publication">
+          <h3>R2X-Based Robust Navigation System for Autonomous Mobile Robots in Urban Intersections</h3>
+          <p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim, Gyounghun Chun. Korean ITS Spring Conference Poster, 2026.</p>
         </article>
         <article class="publication compact-publication">
           <h3>Multi-Camera Pedestrian Full Trajectory Perception Using YOLO, DeepSORT, and Homography Transform</h3>
@@ -146,9 +204,9 @@
         <h2>Selected Achievements</h2>
       </div>
       <div class="grid three">
+        <article class="card"><h3>IEEE ITSC 2026 LBR Poster</h3><p>Accepted poster on time-aware AMR crosswalk navigation using SPaT-based R2X communication.</p></article>
         <article class="card"><h3>KSME Capstone Design Grand Prize</h3><p>Grand Prize for a deep learning-based abnormal vehicle detection and warning system.</p></article>
         <article class="card"><h3>Cloud Programming World Cup 1st Award</h3><p>Built a traffic accident prediction model using UC-win/Road, anomaly detection, and driver gaze recognition.</p></article>
-        <article class="card"><h3>KIISE Undergraduate Paper Award</h3><p>Encouragement Award for abnormal vehicle and driver behavior detection using vision systems and deep neural networks.</p></article>
       </div>
       <p class="note"><a href="achievements.html">See full achievements →</a></p>
     </section>
@@ -170,9 +228,9 @@
           <h3>Technical Skills</h3>
           <ul>
             <li>Robotics: ROS 2, Nav2, SLAM, LiDAR-camera systems, mobile robot navigation</li>
-            <li>Simulation: CARLA, Unity, digital twin environments, scenario generation</li>
+            <li>Simulation: Isaac Sim, CARLA, Unity, digital twin environments, scenario generation</li>
             <li>Programming: Python, C++, MATLAB, LaTeX</li>
-            <li>Perception/AI: YOLO, DeepSORT, Homography Transform, VLMs, sensor fusion</li>
+            <li>Perception/AI: YOLO, DeepSORT, Homography Transform, VLMs, sensor fusion, traffic signal recognition</li>
           </ul>
         </div>
       </div>
@@ -187,7 +245,7 @@
           <p class="section-intro">I am interested in autonomous mobile robots, intelligent transportation systems, communication-assisted navigation, and infrastructure-based scene understanding.</p>
         </div>
         <div class="contact-links">
-          <a href="mailto:tkmh0727@gmail.com">Email</a>
+          <a href="mailto:tkmh0727@kaist.ac.kr">Email</a>
           <a href="https://github.com/tkmh0727-rgb">GitHub</a>
           <a href="achievements.html">Achievements</a>
         </div>
