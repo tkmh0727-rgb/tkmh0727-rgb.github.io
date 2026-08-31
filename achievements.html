@@ -7,69 +7,16 @@
   <title>Achievements | Myeonghyeon Kim</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .poster-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .poster-card {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .poster-preview {
-      min-height: 260px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 55%, #eef2f7 100%);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .poster-preview .type {
-      display: inline-flex;
-      align-self: flex-start;
-      border-radius: 999px;
-      padding: 6px 10px;
-      background: var(--accent);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .poster-preview .preview-title {
-      margin: 28px 0 0;
-      font-size: 1.55rem;
-      line-height: 1.16;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      color: var(--text);
-    }
-
-    .poster-body {
-      padding: 26px;
-    }
-
-    .poster-body p {
-      color: var(--muted);
-    }
-
-    .poster-meta {
-      margin-top: 16px;
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: var(--accent);
-    }
-
-    @media (max-width: 960px) {
-      .poster-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    .poster-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .poster-card { overflow: hidden; padding: 0; }
+    .poster-preview { min-height: 260px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 55%, #eef2f7 100%); border-bottom: 1px solid var(--line); }
+    .poster-preview .type { display: inline-flex; align-self: flex-start; border-radius: 999px; padding: 6px 10px; background: var(--accent); color: #fff; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+    .poster-preview .preview-title { margin: 28px 0 0; font-size: 1.55rem; line-height: 1.16; font-weight: 900; letter-spacing: -0.04em; color: var(--text); }
+    .poster-body { padding: 26px; }
+    .poster-body p { color: var(--muted); }
+    .poster-meta { margin-top: 16px; font-size: 0.9rem; font-weight: 800; color: var(--accent); }
+    .two-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    @media (max-width: 960px) { .poster-grid, .two-col { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -78,10 +25,9 @@
       <a class="brand" href="index.html">Myeonghyeon Kim</a>
       <div class="nav-links">
         <a href="index.html#research">Research</a>
-        <a href="index.html#publications">Publications</a>
         <a href="index.html#projects">Projects</a>
         <a href="#posters">Posters</a>
-        <a href="achievements.html">Achievements</a>
+        <a href="#systems">Systems</a>
         <a href="index.html#contact">Contact</a>
       </div>
     </nav>
@@ -94,120 +40,44 @@
         <h1>Awards, Publications, Projects, and Training</h1>
         <p class="lead">
           This page summarizes selected evidence of research capability, implementation experience,
-          competition outcomes, and training records. The items are organized for an academic CV and
-          public research portfolio rather than as a private application document.
+          competition outcomes, and training records. Recent updates emphasize my AMR crosswalk navigation,
+          SPaT/R2X communication, ROS 2 robotics, and simulation-based intersection intelligence work.
         </p>
       </div>
       <aside class="profile-card">
         <h2>Summary</h2>
-        <p>Competition awards, peer-reviewed and submitted papers, field experiment experience, KIST internship, and mobility-related education.</p>
+        <p>AMR crosswalk navigation, R2X/SPaT experiments, ITS research outputs, ROS 2 robot systems, KIST internship, and mobility AI training.</p>
       </aside>
     </section>
 
     <section class="section compact">
       <div class="stat-grid four">
-        <article class="stat-card">
-          <strong>3+</strong>
-          <span>Major competition / paper awards</span>
-        </article>
-        <article class="stat-card">
-          <strong>7+</strong>
-          <span>ITS / mobility research outputs</span>
-        </article>
-        <article class="stat-card">
-          <strong>KIST</strong>
-          <span>Internship and face-recognition system project</span>
-        </article>
-        <article class="stat-card">
-          <strong>Mobility AI</strong>
-          <span>V2X, perception, trajectory, and robotics experience</span>
-        </article>
+        <article class="stat-card"><strong>3+</strong><span>Major competition / paper awards</span></article>
+        <article class="stat-card"><strong>7+</strong><span>ITS / mobility research outputs</span></article>
+        <article class="stat-card"><strong>ROS 2</strong><span>AMR, Nav2, SLAM, and sensor integration</span></article>
+        <article class="stat-card"><strong>Mobility AI</strong><span>V2X, perception, trajectory, and robotics experience</span></article>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Awards</p>
-        <h2>Competition and Academic Awards</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Awards</p><h2>Competition and Academic Awards</h2></div>
       <div class="timeline">
-        <article class="timeline-item">
-          <span class="timeline-year">2023</span>
-          <div>
-            <h3>Grand Prize, KSME IT Convergence Capstone Design Competition</h3>
-            <p>
-              Awarded Grand Prize at the 2023 Spring Conference of the IT Convergence Division of the Korean Society of Mechanical Engineers.
-              The project, <em>Deep Learning-based Abnormal Vehicle Detection and Warning System</em>, developed a warning system using abnormal object detection and driver gaze estimation.
-            </p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <span class="timeline-year">2022</span>
-          <div>
-            <h3>1st Award, The 10th Cloud Programming World Cup</h3>
-            <p>
-              Built a traffic accident prediction model using the UC-win/Road virtual environment, abnormal object detection,
-              and driver gaze recognition.
-            </p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <span class="timeline-year">2022</span>
-          <div>
-            <h3>Encouragement Award, KIISE Undergraduate / Junior Paper Competition</h3>
-            <p>
-              Received an award for a paper on abnormal vehicle and driver behavior detection based on vision systems and deep neural networks.
-            </p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <span class="timeline-year">Kookmin Univ.</span>
-          <div>
-            <h3>University Commendation and Scholarships</h3>
-            <p>
-              Recognized for competition awards, project experience, and academic performance. Received multiple scholarships during undergraduate study.
-            </p>
-          </div>
-        </article>
+        <article class="timeline-item"><span class="timeline-year">2023</span><div><h3>Grand Prize, KSME IT Convergence Capstone Design Competition</h3><p>Awarded Grand Prize for a deep learning-based abnormal vehicle detection and warning system combining abnormal object detection and driver gaze estimation.</p></div></article>
+        <article class="timeline-item"><span class="timeline-year">2022</span><div><h3>1st Award, The 10th Cloud Programming World Cup</h3><p>Built a traffic accident prediction model using the UC-win/Road virtual environment, abnormal object detection, and driver gaze recognition.</p></div></article>
+        <article class="timeline-item"><span class="timeline-year">2022</span><div><h3>Encouragement Award, KIISE Undergraduate / Junior Paper Competition</h3><p>Received an award for work on abnormal vehicle and driver behavior detection based on vision systems and deep neural networks.</p></div></article>
+        <article class="timeline-item"><span class="timeline-year">Kookmin Univ.</span><div><h3>University Commendation and Scholarships</h3><p>Recognized for competition awards, project experience, and academic performance during undergraduate study.</p></div></article>
       </div>
     </section>
 
     <section class="section muted">
-      <div class="section-heading">
-        <p class="eyebrow">Publications</p>
-        <h2>Research Outputs</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Publications</p><h2>Research Outputs</h2></div>
       <div class="publication-list">
-        <article class="publication">
-          <h3>Time-Aware Crosswalk Navigation for Autonomous Mobile Robots Using SPaT-Based R2X Communication</h3>
-          <p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim.</p>
-          <p>Accepted as a Late-Breaking Results Poster at IEEE ITSC 2026.</p>
-        </article>
-        <article class="publication">
-          <h3>Multi-Camera Pedestrian Full Trajectory Perception Using YOLO, DeepSORT, and Homography Transform</h3>
-          <p><strong>Myeonghyeon Kim</strong>, Inhi Kim.</p>
-          <p>Submitted to ITS Asia-Pacific 2025. Proposed a multi-camera pedestrian tracking pipeline using detection, tracking, Re-ID, and homography-based matching.</p>
-        </article>
-        <article class="publication">
-          <h3>Analysis of C-ITS Scenarios for Blind Spot Incidents at Intersections Using V2X Communication-Based Field Experiment</h3>
-          <p>Co-author, Journal of Korean Society of Intelligent Transport Systems, 2024.</p>
-          <p>Contributed to experimental design and GNSS trajectory data collection/analysis for V2X-based intersection blind-spot scenarios.</p>
-        </article>
-        <article class="publication">
-          <h3>Development of Pedestrian Recognition Algorithm for Infrastructure-based Pedestrian Path Prediction</h3>
-          <p>First-author poster, 2024 Korean ITS Spring Conference.</p>
-          <p>Compared object detection models for pedestrian recognition under real-time and performance constraints.</p>
-        </article>
-        <article class="publication">
-          <h3>Detection of Abnormal Vehicle and Driver Behaviors based on Vision System and Deep Neural Network</h3>
-          <p>First-author undergraduate/junior paper competition paper, KIISE, 2022.</p>
-          <p>Developed a warning system by detecting abnormal vehicle behavior and driver inattention through vision and gaze-related information.</p>
-        </article>
-        <article class="publication">
-          <h3>Development of Driver's Gaze Object Detection System</h3>
-          <p>Conference proceedings paper, KIISE, 2022.</p>
-          <p>Developed a system for identifying objects of driver attention using gaze and head pose-related data collection.</p>
-        </article>
+        <article class="publication"><h3>Time-Aware Crosswalk Navigation for Autonomous Mobile Robots Using SPaT-Based R2X Communication</h3><p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim.</p><p>Accepted as a Late-Breaking Results Poster at IEEE ITSC 2026.</p></article>
+        <article class="publication"><h3>R2X-Based Robust Navigation System for Autonomous Mobile Robots in Urban Intersections</h3><p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim, Gyounghun Chun.</p><p>Korean ITS Spring Conference Poster, 2026. Focused on robust AMR navigation using SPaT/R2X communication in urban intersections.</p></article>
+        <article class="publication"><h3>SPaT-Driven Robust Crosswalk Navigation for Autonomous Mobile Robots</h3><p><strong>Myeonghyeon Kim</strong>, Junyoung Kim, Inhi Kim, Gyounghun Chun.</p><p>Research manuscript on SPaT remaining-time information, Time-to-Cross decision logic, and comparative evaluation against vision-only traffic-light recognition.</p></article>
+        <article class="publication"><h3>Multi-Camera Pedestrian Full Trajectory Perception Using YOLO, DeepSORT, and Homography Transform</h3><p><strong>Myeonghyeon Kim</strong>, Inhi Kim.</p><p>Submitted to ITS Asia-Pacific 2025. Proposed a multi-camera pedestrian tracking pipeline using detection, tracking, Re-ID, and homography-based matching.</p></article>
+        <article class="publication"><h3>Analysis of C-ITS Scenarios for Blind Spot Incidents at Intersections Using V2X Communication-Based Field Experiment</h3><p>Co-author, Journal of Korean Society of Intelligent Transport Systems, 2024.</p><p>Contributed to experimental design and GNSS trajectory data collection/analysis for V2X-based intersection blind-spot scenarios.</p></article>
+        <article class="publication"><h3>Development of Pedestrian Recognition Algorithm for Infrastructure-based Pedestrian Path Prediction</h3><p>First-author poster, 2024 Korean ITS Spring Conference.</p><p>Compared object detection models for pedestrian recognition under real-time and performance constraints.</p></article>
       </div>
     </section>
 
@@ -218,122 +88,43 @@
         <p class="note">Selected poster and manuscript materials related to R2X/SPaT-based autonomous mobile robot navigation.</p>
       </div>
       <div class="poster-grid">
-        <article class="card poster-card">
-          <div class="poster-preview">
-            <span class="type">Poster</span>
-            <p class="preview-title">R2X-Based Robust Navigation System for AMRs in Urban Intersections</p>
-          </div>
-          <div class="poster-body">
-            <h3>2026 Korean ITS Spring Conference Poster</h3>
-            <p>
-              Presents an R2X/SPaT-based navigation framework for autonomous mobile robots at signalized crosswalks,
-              comparing vision-based and SPaT-based decision making under normal, illumination-changing, and occlusion scenarios.
-            </p>
-            <p class="poster-meta">R2X · SPaT · AMR · Crosswalk Navigation · Korean ITS</p>
-          </div>
-        </article>
+        <article class="card poster-card"><div class="poster-preview"><span class="type">Poster</span><p class="preview-title">R2X-Based Robust Navigation System for AMRs in Urban Intersections</p></div><div class="poster-body"><h3>2026 Korean ITS Spring Conference Poster</h3><p>Presents an R2X/SPaT-based navigation framework for autonomous mobile robots at signalized crosswalks, comparing vision-based and SPaT-based decision making under normal, illumination-changing, and occlusion scenarios.</p><p class="poster-meta">R2X · SPaT · AMR · Crosswalk Navigation · Korean ITS</p></div></article>
+        <article class="card poster-card"><div class="poster-preview"><span class="type">Manuscript</span><p class="preview-title">SPaT-Driven Robust Crosswalk Navigation for Autonomous Mobile Robots</p></div><div class="poster-body"><h3>SPaT-Driven Robust Crosswalk Navigation</h3><p>Defines signalized crosswalk traversal as a time-constrained decision problem and uses SPaT remaining-time information with a Time-to-Cross criterion to improve signal-compliant AMR crossing decisions.</p><p class="poster-meta">SPaT · TTC · R2X · Pedestrian Signal · AMR</p></div></article>
+        <article class="card poster-card"><div class="poster-preview"><span class="type">Manuscript</span><p class="preview-title">R2X-Based Robust Navigation System for Autonomous Mobile Robots</p></div><div class="poster-body"><h3>R2X-Based Robust Navigation System</h3><p>Describes an R2X communication-based AMR navigation system that leverages SPaT information to support robust, predictive, and signal-aware crossing decisions in urban intersection environments.</p><p class="poster-meta">R2X · Robust Navigation · Urban Intersections · ITS</p></div></article>
+      </div>
+    </section>
 
-        <article class="card poster-card">
-          <div class="poster-preview">
-            <span class="type">Manuscript</span>
-            <p class="preview-title">SPaT-Driven Robust Crosswalk Navigation for Autonomous Mobile Robots</p>
-          </div>
-          <div class="poster-body">
-            <h3>SPaT-Driven Robust Crosswalk Navigation</h3>
-            <p>
-              Defines signalized crosswalk traversal as a time-constrained decision problem and uses SPaT remaining-time information
-              with a Time-to-Cross criterion to improve signal-compliant AMR crossing decisions.
-            </p>
-            <p class="poster-meta">SPaT · TTC · R2X · Pedestrian Signal · AMR</p>
-          </div>
-        </article>
-
-        <article class="card poster-card">
-          <div class="poster-preview">
-            <span class="type">Manuscript</span>
-            <p class="preview-title">R2X-Based Robust Navigation System for Autonomous Mobile Robots</p>
-          </div>
-          <div class="poster-body">
-            <h3>R2X-Based Robust Navigation System</h3>
-            <p>
-              Describes an R2X communication-based AMR navigation system that leverages SPaT information to support robust,
-              predictive, and signal-aware crossing decisions in urban intersection environments.
-            </p>
-            <p class="poster-meta">R2X · Robust Navigation · Urban Intersections · ITS</p>
-          </div>
-        </article>
+    <section id="systems" class="section muted">
+      <div class="section-heading"><p class="eyebrow">Systems</p><h2>Robotics and Simulation Experience</h2></div>
+      <div class="two-col">
+        <article class="card project"><h3>Delivery Robot ROS 2 / Isaac Sim Integration</h3><p>Configured a Delivery Robot simulation with LiDAR, IMU, stereo camera, odometry, joint states, ROS 2 topics, and command velocity control for navigation experiments.</p><p class="meta">Isaac Sim · ROS 2 · LiDAR · IMU · Camera · CmdVel</p></article>
+        <article class="card project"><h3>Fast-LIO2 and Nav2-based Autonomous Navigation</h3><p>Integrated LiDAR SLAM and navigation components to support mapping, localization, and Nav2-based autonomous movement in simulation and robot experiments.</p><p class="meta">Fast-LIO2 · Nav2 · SLAM · PointCloud · ROS 2</p></article>
+        <article class="card project"><h3>VLM-oriented Intersection Scenario Design</h3><p>Designed future research direction for infrastructure-camera scene understanding, including pedestrians, vehicles, occlusion, traffic signals, and crosswalk context.</p><p class="meta">VLM · Intersection Understanding · Scenario Generation</p></article>
+        <article class="card project"><h3>Traffic Light Perception for Mobile Robots</h3><p>Developed and evaluated vision-based traffic signal perception using detection, color classification, and temporal smoothing as a baseline for SPaT/R2X comparison.</p><p class="meta">YOLO · HSV · Traffic Signal · Perception Baseline</p></article>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Implementation Experience</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Earlier Projects</p><h2>Implementation Experience</h2></div>
       <div class="grid two">
-        <article class="card project">
-          <h3>Face Recognition-based Automatic Door Control System</h3>
-          <p>
-            Developed during a KIST internship. The system used Gaussian Mixture Model-based motion detection,
-            RetinaFace for face detection, and WebSocket communication with a face recognition model for access control.
-          </p>
-          <p class="meta">KIST · RetinaFace · GMM · WebSocket · Face Recognition</p>
-        </article>
-        <article class="card project">
-          <h3>V2X/C-ITS Field Experiment Analysis</h3>
-          <p>
-            Participated in V2X-based C-ITS scenario experiments for intersection blind-spot incidents,
-            including experiment design and GNSS-based vehicle trajectory data collection and analysis.
-          </p>
-          <p class="meta">V2X · C-ITS · GNSS · Field Experiment · Intersection Safety</p>
-        </article>
-        <article class="card project">
-          <h3>Deep Learning-based Abnormal Vehicle Detection and Warning</h3>
-          <p>
-            Built a system that combined abnormal vehicle/object detection with driver gaze estimation to determine
-            whether the driver was aware of a hazardous object and to provide a warning.
-          </p>
-          <p class="meta">Anomaly Detection · Driver Gaze · Deep Learning · Warning System</p>
-        </article>
-        <article class="card project">
-          <h3>Pedestrian Recognition for Infrastructure-based Path Prediction</h3>
-          <p>
-            Conducted object model comparison for pedestrian recognition to identify models suitable for real-time
-            infrastructure-based pedestrian path prediction systems.
-          </p>
-          <p class="meta">Pedestrian Recognition · ITS · Object Detection · Infrastructure Sensing</p>
-        </article>
+        <article class="card project"><h3>Face Recognition-based Automatic Door Control System</h3><p>Developed during a KIST internship using Gaussian Mixture Model-based motion detection, RetinaFace face detection, and WebSocket communication with a recognition model.</p><p class="meta">KIST · RetinaFace · GMM · WebSocket</p></article>
+        <article class="card project"><h3>V2X/C-ITS Field Experiment Analysis</h3><p>Participated in V2X-based C-ITS scenario experiments for intersection blind-spot incidents, including experiment design and GNSS trajectory analysis.</p><p class="meta">V2X · C-ITS · GNSS · Field Experiment</p></article>
+        <article class="card project"><h3>Deep Learning-based Abnormal Vehicle Detection and Warning</h3><p>Built a warning system combining abnormal vehicle/object detection with driver gaze estimation.</p><p class="meta">Anomaly Detection · Driver Gaze · Deep Learning</p></article>
+        <article class="card project"><h3>Pedestrian Recognition for Infrastructure-based Path Prediction</h3><p>Conducted object model comparison for real-time infrastructure-based pedestrian path prediction systems.</p><p class="meta">Pedestrian Recognition · ITS · Object Detection</p></article>
       </div>
     </section>
 
     <section class="section muted">
-      <div class="section-heading">
-        <p class="eyebrow">Training</p>
-        <h2>Education, Internship, and Training</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Training</p><h2>Education, Internship, and Training</h2></div>
       <div class="grid three">
-        <article class="card">
-          <h3>KIST Internship</h3>
-          <p>Completed a credit-linked internship program at Korea Institute of Science and Technology.</p>
-        </article>
-        <article class="card">
-          <h3>Future Mobility Microdegree</h3>
-          <p>Completed a formal future automotive / mobility curriculum through an advanced field innovation program.</p>
-        </article>
-        <article class="card">
-          <h3>DNA+ Training</h3>
-          <p>Strengthened practical understanding of V2X, transportation data analysis, and autonomous driving infrastructure.</p>
-        </article>
-        <article class="card">
-          <h3>Deep Learning Study Program</h3>
-          <p>Completed a deep learning study program based on University of Michigan EECS 498 materials through Modu Labs.</p>
-        </article>
+        <article class="card"><h3>KIST Internship</h3><p>Completed a credit-linked internship program at Korea Institute of Science and Technology.</p></article>
+        <article class="card"><h3>Future Mobility Microdegree</h3><p>Completed a formal future automotive / mobility curriculum through an advanced field innovation program.</p></article>
+        <article class="card"><h3>DNA+ Training</h3><p>Strengthened practical understanding of V2X, transportation data analysis, and autonomous driving infrastructure.</p></article>
+        <article class="card"><h3>Deep Learning Study Program</h3><p>Completed a deep learning study program based on University of Michigan EECS 498 materials through Modu Labs.</p></article>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© 2026 Myeonghyeon Kim. <a href="index.html">Back to homepage</a></p>
-  </footer>
+  <footer class="footer"><p>© 2026 Myeonghyeon Kim. <a href="index.html">Back to homepage</a></p></footer>
 </body>
 </html>
