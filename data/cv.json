@@ -1,0 +1,356 @@
+{
+  "updated": "2026-09-23",
+  "name": "Myeonghyeon Kim",
+  "korean_name": "김명현",
+  "role": "M.S. Student · KAIST",
+  "affiliation": "Cho Chun Shik Graduate School of Mobility",
+  "email": "tkmh0727@kaist.ac.kr",
+  "github": "https://github.com/tkmh0727-rgb",
+  "intro": "I study how autonomous mobile robots can safely navigate urban intersections. My work connects SPaT/R2X communication, robotic navigation and infrastructure-based perception, from real-world crossing experiments to simulation.",
+  "education": [
+    {
+      "period": "2025–present",
+      "title": "KAIST",
+      "subtitle": "M.S. student · Cho Chun Shik Graduate School of Mobility",
+      "description": "Advisor: Prof. Inhi Kim. Thesis research: VLM-based intersection context understanding for autonomous mobile robot crossing."
+    },
+    {
+      "period": "Undergraduate",
+      "title": "Kookmin University",
+      "subtitle": "Automotive IT Convergence · Graduated",
+      "description": "Advanced microdegrees in Future Automotive and Future Automotive Mobility Convergence."
+    }
+  ],
+  "experience": [
+    {
+      "period": "2024",
+      "title": "KAIST",
+      "subtitle": "Researcher · Cho Chun Shik Graduate School of Mobility",
+      "description": "V2X field experiment analysis and infrastructure-based pedestrian perception."
+    },
+    {
+      "period": "Sep–Dec 2023",
+      "title": "Korea Institute of Science and Technology (KIST)",
+      "subtitle": "Credit-linked internship",
+      "description": "Motion detection and face recognition for automatic door control."
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub-1",
+      "title": "V2X 통신 기반 현장 실험을 통한 교차로 사각지대 돌발상황 C-ITS 시나리오 분석",
+      "authors": "Seungmin Oh, Myeonghyeon Kim, Ki Tae Jang, Gyounghoon Chun",
+      "venue": "The Journal of The Korea Institute of Intelligent Transport Systems, 23(6), 174–189 (2024).",
+      "year": 2024,
+      "kind": "journal",
+      "status": "Published",
+      "url": "https://doi.org/10.12815/kits.2024.23.6.174"
+    },
+    {
+      "id": "pub-2",
+      "title": "Time-Aware Crosswalk Navigation for Autonomous Mobile Robots Using SPaT-Based R2X Communication",
+      "authors": "Myeonghyeon Kim, Junyoung Kim, Seunghee Park, Inhi Kim",
+      "venue": "IEEE ITSC 2026 · Late-Breaking Results poster · Naples, Italy.",
+      "year": 2026,
+      "kind": "conference",
+      "status": "Accepted · LBR poster"
+    },
+    {
+      "id": "pub-3",
+      "title": "R2X-Based Robust Navigation System for Autonomous Mobile Robots in Urban Intersections",
+      "authors": "Myeonghyeon Kim, Junyoung Kim, Inhi Kim, Gyounghun Chun.",
+      "venue": "Korean ITS Spring Conference, 2026 · Poster.",
+      "year": 2026,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "pub-4",
+      "title": "Hidden Costs of Stereo Depth in Real-Time Systems: LiDAR vs. Camera-Based 3D Perception for ITS",
+      "authors": "Junyoung Kim, Myeonghyeon Kim, Inhi Kim.",
+      "venue": "Korean ITS Spring Conference, 2025.",
+      "year": 2025,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "pub-5",
+      "title": "군중 대피 안전을 위한 로봇의 새로운 역할: 출구 전방 적응형 장애물",
+      "authors": "Junyoung Kim, Myeonghyeon Kim, Jinwoo Kim, Inhi Kim.",
+      "venue": "Korea Institute for Structural Maintenance and Inspection, 2025 Fall Conference and Special Lecture.",
+      "year": 2025,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "pub-6",
+      "title": "Multi-Camera Pedestrian Full Trajectory Perception Using YOLO, DeepSORT, and Homography Transform",
+      "authors": "Myeonghyeon Kim, Inhi Kim.",
+      "venue": "2025 Suwon ITS Asia-Pacific Forum · Poster PS06-133.",
+      "year": 2025,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "its-spring-2025",
+      "title": "Multi-Camera Pedestrian Full Trajectory Perception Using YOLO, DeepSORT, and Homography Transform",
+      "authors": "Myeonghyeon Kim, Inhi Kim",
+      "venue": "Korean ITS Spring Conference, 2025 · Poster.",
+      "year": 2025,
+      "kind": "conference",
+      "status": "Poster"
+    },
+    {
+      "id": "pub-7",
+      "title": "자율주행 인프라 기반 보행자 경로 예측 시스템 개발을 위한 보행자 인식 알고리즘 개발 연구",
+      "authors": "Kim Myeonghyeon, Inhi Kim.",
+      "venue": "Korean ITS Spring Conference, 2024.",
+      "year": 2024,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "pub-8",
+      "title": "딥러닝 기반 이상 차량 탐지 및 경고 시스템",
+      "authors": "오민택, 송승현, 이치웅, 김명현, 성주희, 김형준, 정문규, 이상헌",
+      "venue": "Korean Society of Mechanical Engineers Spring Conference, 2023.",
+      "year": 2023,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "pub-9",
+      "title": "운전자 시선 집중 물체의 탐지 시스템 개발",
+      "authors": "ChiWoong Lee, Myeonghyeon Kim, SangHun Lee",
+      "venue": "Korean Institute of Information Scientists and Engineers Conference Proceedings, 2022.",
+      "year": 2022,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "pub-10",
+      "title": "비전시스템 및 심층신경망 기반 차량 및 운전자의 이상 행동 검출",
+      "authors": "Song Seung Hyun, Sung Joo Hee, ChiWoong Lee, Oh Min Taek, Kim Hyun Joon, Kim Myeonghyeon, Yeo Jung Jin, SangHun Lee.",
+      "venue": "Korean Institute of Information Scientists and Engineers Conference Proceedings, 2022.",
+      "year": 2022,
+      "kind": "conference",
+      "status": "Conference contribution"
+    },
+    {
+      "id": "pub-11",
+      "title": "SPaT-Driven Robust Crosswalk Navigation for Autonomous Mobile Robots",
+      "authors": "Myeonghyeon Kim, Junyoung Kim, Inhi Kim, Gyounghun Chun.",
+      "venue": "APTE 2026 · Conference manuscript.",
+      "year": 2026,
+      "kind": "manuscript",
+      "status": "Manuscript"
+    },
+    {
+      "id": "pub-12",
+      "title": "R2X-Based Robust Navigation System for Autonomous Mobile Robots in Urban Intersections",
+      "authors": "Myeonghyeon Kim, Junyoung Kim, Inhi Kim, Gyounghun Chun.",
+      "venue": "ITS World Congress 2026 · Conference manuscript.",
+      "year": 2026,
+      "kind": "manuscript",
+      "status": "Manuscript"
+    }
+  ],
+  "projects": [
+    {
+      "id": "crosswalk",
+      "title": "SPaT / R2X-assisted crosswalk navigation",
+      "period": "2026",
+      "stage": "Field experiments",
+      "description": "Integrated ROS 2, Nav2 and a hybrid safety node to make crossing decisions from signal phase and remaining green time. Compared SPaT and vision-based navigation under daytime, nighttime and dynamic occlusion conditions.",
+      "tags": [
+        "ROS 2",
+        "Nav2",
+        "SPaT / R2X",
+        "Time-to-Cross"
+      ]
+    },
+    {
+      "id": "vlm",
+      "title": "VLM-based intersection context understanding",
+      "period": "2026",
+      "stage": "Thesis research",
+      "description": "Investigating infrastructure-camera scene understanding for AMR waiting, entry and crossing decisions. The thesis plan covers pedestrians, vehicles, crosswalk occupancy and occlusion, with simulation and scenario-based evaluation.",
+      "tags": [
+        "VLM",
+        "Infrastructure cameras",
+        "AMR",
+        "Simulation"
+      ]
+    },
+    {
+      "id": "lidar",
+      "title": "LiDAR navigation & cloud robot experiments",
+      "period": "2026",
+      "stage": "System integration",
+      "description": "Worked on LiDAR mapping, localization and Nav2 integration for mobile robots, including FAST-LIO navigation experiments at KAIST Munji Campus.",
+      "tags": [
+        "FAST-LIO",
+        "LiDAR",
+        "SLAM",
+        "Nav2"
+      ]
+    },
+    {
+      "id": "digital-twin",
+      "title": "Delivery robot digital twin",
+      "period": "2026",
+      "stage": "Simulation development",
+      "description": "Configured an Isaac Sim delivery robot pipeline with LiDAR, IMU, camera, odometry, joint states and ROS 2 communication for navigation scenarios.",
+      "tags": [
+        "Isaac Sim",
+        "ROS 2",
+        "Sensor integration"
+      ]
+    },
+    {
+      "id": "llm-planning",
+      "title": "LLM-guided planning in nuPlan",
+      "period": "2025",
+      "stage": "Research prototype",
+      "description": "Prototyped an LLM context interpreter that adjusts rule-based PDM planner parameters. Implemented an uncooperative overtaking scenario in nuPlan and compared behavior with a mode-selection baseline.",
+      "tags": [
+        "nuPlan",
+        "LLM",
+        "PDM planner",
+        "Long-tail scenarios"
+      ]
+    },
+    {
+      "id": "pedestrian",
+      "title": "Multi-camera pedestrian trajectory perception",
+      "period": "2025",
+      "stage": "Research & conference posters",
+      "description": "Combined YOLOv8, DeepSORT, Re-ID and homography across five CCTV views to study consistent global IDs and pedestrian trajectory recovery.",
+      "tags": [
+        "YOLOv8",
+        "DeepSORT",
+        "Re-ID",
+        "Homography"
+      ]
+    },
+    {
+      "id": "v2x",
+      "title": "V2X / C-ITS intersection field experiments",
+      "period": "2024",
+      "stage": "Journal publication",
+      "description": "Contributed to scenario design, GNSS trajectory collection and analysis of driving behavior around intersection blind spots.",
+      "tags": [
+        "V2X",
+        "C-ITS",
+        "GNSS",
+        "Field experiments"
+      ]
+    },
+    {
+      "id": "recognition",
+      "title": "Infrastructure-based pedestrian recognition",
+      "period": "2024",
+      "stage": "Conference research",
+      "description": "Compared object detection models for real-time pedestrian recognition in infrastructure-based path prediction systems.",
+      "tags": [
+        "Object detection",
+        "Pedestrian perception",
+        "ITS"
+      ]
+    },
+    {
+      "id": "kist",
+      "title": "Face recognition for automatic door control",
+      "period": "2023",
+      "stage": "KIST internship",
+      "description": "Developed motion detection with Gaussian Mixture Models, evaluated face detectors and integrated RetinaFace with WebSocket-based face recognition for automatic access control.",
+      "tags": [
+        "RetinaFace",
+        "GMM",
+        "WebSocket"
+      ]
+    },
+    {
+      "id": "driver",
+      "title": "Driver attention & abnormal vehicle detection",
+      "period": "2022–2023",
+      "stage": "Team projects & awards",
+      "description": "Developed vision-based driver gaze and hazardous-object detection components for warning systems. Work included gaze data acquisition and abnormal vehicle behavior analysis.",
+      "tags": [
+        "Driver gaze",
+        "Deep learning",
+        "Computer vision"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "period": "2024",
+      "title": "Commendation for Meritorious Service",
+      "subtitle": "Kookmin University",
+      "description": "Recognized for exemplary university life and contributions through external activities."
+    },
+    {
+      "period": "2023",
+      "title": "Grand Prize · IT Convergence Capstone Design Competition",
+      "subtitle": "Korean Society of Mechanical Engineers (KSME)",
+      "description": "Team project: deep learning-based abnormal vehicle detection and warning system."
+    },
+    {
+      "period": "2022",
+      "title": "1st Award · 10th Cloud Programming World Cup",
+      "subtitle": "Cloud Programming World Cup",
+      "description": "Team project combining a virtual driving environment, abnormal-object detection and driver gaze recognition."
+    },
+    {
+      "period": "2022",
+      "title": "Encouragement Award · Undergraduate / Junior Paper Competition",
+      "subtitle": "Korea Software Congress (KIISE)",
+      "description": "Vision-system and deep-neural-network research on abnormal vehicle and driver behaviors."
+    },
+    {
+      "period": "2018 · 2022",
+      "title": "Academic Merit Scholarships",
+      "subtitle": "Kookmin University",
+      "description": "Academic merit scholarship, Fall 2018 (성적3종) and Fall 2022 (성적2종)."
+    }
+  ],
+  "training": [
+    {
+      "period": "Jun 2024",
+      "title": "DNA+ Joint Education & Research Program",
+      "subtitle": "KAIST & Ajou University",
+      "description": "Road transportation convergence program, June 17–28, 2024."
+    },
+    {
+      "period": "Feb 2024",
+      "title": "Two Advanced Microdegrees",
+      "subtitle": "Future Automotive · Future Automotive Mobility Convergence",
+      "description": "Completed both advanced curricula, 9 credits each."
+    },
+    {
+      "period": "Mar 2022",
+      "title": "Deep Learning Fundamentals",
+      "subtitle": "MODULABS · Justin’s course based on Michigan EECS 498",
+      "description": "Certificate of completion, March 24, 2022."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Robotics",
+      "items": "ROS 2, Nav2, LiDAR SLAM, FAST-LIO, sensor integration"
+    },
+    {
+      "title": "Perception & AI",
+      "items": "YOLO, DeepSORT, Re-ID, homography, VLMs, LLM-guided planning"
+    },
+    {
+      "title": "Simulation",
+      "items": "Isaac Sim, nuPlan, digital twins"
+    },
+    {
+      "title": "Programming",
+      "items": "Python, C++, MATLAB, LaTeX"
+    }
+  ]
+}
