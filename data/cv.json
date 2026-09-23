@@ -116,7 +116,7 @@
       "venue": "Korean Society of Mechanical Engineers Spring Conference, 2023.",
       "year": 2023,
       "kind": "conference",
-      "status": "Conference contribution"
+      "status": "Conference contribution · Co-first author"
     },
     {
       "id": "pub-9",
@@ -125,7 +125,7 @@
       "venue": "Korean Institute of Information Scientists and Engineers Conference Proceedings, 2022.",
       "year": 2022,
       "kind": "conference",
-      "status": "Conference contribution"
+      "status": "Conference contribution · Co-first author"
     },
     {
       "id": "pub-10",
@@ -134,16 +134,16 @@
       "venue": "Korean Institute of Information Scientists and Engineers Conference Proceedings, 2022.",
       "year": 2022,
       "kind": "conference",
-      "status": "Conference contribution"
+      "status": "Conference contribution · Co-first author"
     },
     {
       "id": "pub-11",
       "title": "SPaT-Driven Robust Crosswalk Navigation for Autonomous Mobile Robots",
       "authors": "Myeonghyeon Kim, Junyoung Kim, Inhi Kim, Gyounghun Chun.",
-      "venue": "APTE 2026 · Conference manuscript.",
+      "venue": "APTE 2026 · Conference presentation.",
       "year": 2026,
-      "kind": "manuscript",
-      "status": "Manuscript"
+      "kind": "conference",
+      "status": "Presented"
     },
     {
       "id": "pub-12",
