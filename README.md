@@ -6,7 +6,7 @@ GitHub Pages: https://tkmh0727-rgb.github.io/
 
 1. `data/cv.json`에서 학력, 경력, 논문, 프로젝트, 수상, 교육 내용을 수정합니다.
 2. Python 3로 `python build.py`를 실행합니다. 외부 패키지는 필요하지 않습니다.
-3. 생성된 HTML 5개와 데이터 변경을 함께 커밋합니다.
+3. 생성된 HTML 6개와 데이터·공개 이미지 변경을 함께 커밋합니다.
 4. 로컬 확인: `python -m http.server 8000` 실행 후 `http://localhost:8000`을 엽니다.
 5. 기본 브랜치에 반영되면 기존 GitHub Pages 설정에 따라 게시됩니다.
 
@@ -25,9 +25,19 @@ HTML은 정적으로 생성되어 JavaScript 없이 읽을 수 있습니다. 기
 ## 페이지
 
 - `index.html`: 전체 CV
+- `news.html`: 사진·포스터·문서 미리보기가 포함된 활동 기록
 - `research.html`: 연구 방향과 석사 연구
 - `projects.html`: 구현·실험 경험
 - `publications.html`: 논문·학회 기여·원고
 - `achievements.html`: 수상·장학금·교육
 
-공개 데이터는 `data/cv.json`, 공통 렌더링은 `build.py`, 스타일은 `theme.css`에서 수정합니다.
+공개 CV 데이터는 `data/cv.json`, 활동 기록은 `data/news.json`, 공통 렌더링은 `build.py`, 스타일은 `theme.css`에서 수정합니다.
+
+## News 사진과 문서 미리보기
+
+- `data/news.json`에서 날짜, 활동 설명, 이미지 종류, 관련 CV 항목 링크를 관리합니다. 메인에는 최근 활동 3개, News에는 연도별 전체 활동이 표시됩니다.
+- 이미지는 `assets/news/`의 웹용 WebP 파일을 사용합니다. 원본 PDF·상장·출장 서류는 올리지 않습니다.
+- 현장 사진이 없는 활동은 관련 포스터, 논문 첫 페이지 또는 공개용 상장·수료증 발췌 이미지를 사용할 수 있습니다. `media_label`로 이미지 종류를 명시합니다.
+- 상장 이미지에는 불필요한 문서번호·서명 영역을 제외합니다. 학번·생년월일·주소·재정정보가 있는 증명서는 공개 자산으로 사용하지 않습니다.
+- 행사 기간만 확인된 경우 `date_label`에 `Conference dates`를 표시합니다. 상장 날짜는 수상 관련 학회 연도와 구분합니다.
+- 현장 사진을 클릭하면 이미지 전체를 볼 수 있습니다. CV 인쇄에서는 메인의 Recent activities 영역을 숨깁니다.

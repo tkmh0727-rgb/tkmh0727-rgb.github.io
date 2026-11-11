@@ -2,8 +2,13 @@
 from pathlib import Path
 from html import escape as e
 import json
+from datetime import date
 ROOT=Path(__file__).resolve().parent
 D=json.loads((ROOT/'data/cv.json').read_text(encoding='utf-8'))
+NEWS=sorted(json.loads((ROOT/'data/news.json').read_text(encoding='utf-8')),key=lambda x:date.fromisoformat(x['date_start']),reverse=True)
+for item in NEWS:
+    if not (ROOT/item['image']).is_file():
+        raise FileNotFoundError(item['image'])
 
 def section(id,title,body,intro=''):
     return f'<section id="{id}" class="cv-section"><h2>{title}</h2>'+ (f'<p class="section-intro">{e(intro)}</p>' if intro else '')+body+'</section>'
@@ -20,9 +25,18 @@ def projects():
     return ''.join(f'<article class="project" id="{p["id"]}"><div class="pub-meta"><span class="date">{e(p["period"])}</span><span class="badge">{e(p["stage"])}</span></div><h3>{e(p["title"])}</h3><p>{e(p["description"])}</p><ul class="tags">'+''.join(f'<li>{e(t)}</li>' for t in p['tags'])+'</ul></article>' for p in D['projects'])
 def skill_list():
     return '<dl class="skills">'+''.join(f'<div><dt>{e(s["title"])}</dt><dd>{e(s["items"])}</dd></div>' for s in D['skills'])+'</dl>'
+def activity_cards(items,preview=False):
+    cards=[]
+    for item in items:
+        position=e(item.get('image_position','50% 50%'))
+        links=''.join(f'<a class="text-link" href="{e(link["href"])}">{e(link["label"])} ↗</a>' for link in item['links'])
+        cards.append(f'''<article class="activity-card" id="activity-{e(item['id'])}">
+<figure class="activity-media {e(item['image_kind'])}"><a class="activity-image-link" href="{e(item['image'])}" aria-label="View image: {e(item['title'])}"><img src="{e(item['image'])}" alt="{e(item['alt'])}" loading="lazy" decoding="async" style="object-position:{position}"></a><figcaption>{e(item['media_label'])}</figcaption></figure>
+<div class="activity-copy"><p class="activity-date"><time datetime="{e(item['date_start'])}">{e(item['date_label'])}</time></p><h3>{e(item['title'])}</h3><p class="activity-summary">{e(item['summary'])}</p><div class="activity-links">{links}</div></div></article>''')
+    return '<div class="activity-grid'+(' activity-preview' if preview else '')+'">'+''.join(cards)+'</div>'
 def page(file,title,body,contents,home=False,description=''):
-    nav=''.join(f'<a href="{f}"'+(' aria-current="page"' if file==f else '')+f'>{label}</a>' for f,label in [('index.html','CV'),('research.html','Research'),('projects.html','Projects'),('publications.html','Publications'),('achievements.html','Honors')])
-    toc=''.join(f'<a href="#{id}">{label}</a>' for id,label in contents)
+    nav=''.join(f'<a href="{f}"'+(' aria-current="page"' if file==f else '')+f'>{label}</a>' for f,label in [('index.html','CV'),('news.html','News'),('research.html','Research'),('projects.html','Projects'),('publications.html','Publications'),('achievements.html','Honors')])
+    toc=''.join(f'<a href="#{id}">{label}</a>' for id,label in contents if id!='manuscripts' or any(p['kind']=='manuscript' for p in D['publications']))
     if home:
         hero=f'<div class="identity"><div><p class="eyebrow">Curriculum vitae <span> / </span> {e(D["role"])}</p><h1>{e(D["name"])}<span class="korean" lang="ko">{e(D["korean_name"])}</span></h1><p class="affiliation">{e(D["affiliation"])}<br>Korea Advanced Institute of Science and Technology</p><p class="lead">{e(D["intro"])}</p><div class="hero-links"><a href="mailto:{e(D["email"])}">Email ↗</a><a href="{e(D["github"])}">GitHub ↗</a><a href="#education">Read CV ↓</a></div></div><img class="portrait" src="assets/profile.jpg" width="168" height="210" alt="Portrait of Myeonghyeon Kim"></div>'
     else:hero=f'<p class="eyebrow">Myeonghyeon Kim / Academic CV</p><h1>{e(title)}</h1><p class="lead">{e(description)}</p>'
@@ -37,13 +51,17 @@ edu=section('education','Education',records(D['education']))
 exp=section('experience','Research experience',records(D['experience']))
 journal=section('journals','Journal publications',publications('journal'))
 conf=section('conferences','Conference contributions',publications('conference'))
-drafts=section('manuscripts','Conference manuscripts',publications('manuscript'),'Manuscripts are listed separately from published work and accepted contributions.')
+drafts=section('manuscripts','Conference manuscripts',publications('manuscript'),'Manuscripts are listed separately from published work and accepted contributions.') if any(p['kind']=='manuscript' for p in D['publications']) else ''
 awards=section('awards','Honors & scholarships',records(D['awards']))
 training=section('training','Additional education',records(D['training']))
 skills=section('skills','Technical skills',skill_list())
 research=section('research','Research interests','<p>Autonomous mobile robot navigation · SPaT/R2X communication · Infrastructure-based perception · Vision-language models · Intelligent transportation systems</p><p class="research-note"><span class="badge">Thesis research</span> VLM-based intersection context understanding for AMR crossing decisions.</p><a class="text-link" href="research.html">Research direction ↗</a>')
 contact=section('contact','Contact',f'<p>For research collaborations and inquiries:</p><div class="contact-links"><a href="mailto:{e(D["email"])}">{e(D["email"])}</a><a href="{e(D["github"])}">GitHub ↗</a></div>')
-page('index.html','Curriculum Vitae',edu+exp+research+journal+conf+drafts+awards+training+skills+contact,[('education','Education'),('experience','Experience'),('research','Research'),('journals','Publications'),('conferences','Conferences'),('manuscripts','Manuscripts'),('awards','Honors'),('training','Education & training'),('skills','Skills'),('contact','Contact')],home=True)
+latest=section('news','Recent activities',activity_cards(NEWS[:3],preview=True)+'<a class="activity-archive-link text-link" href="news.html">View all news and activities ↗</a>')
+page('index.html','Curriculum Vitae',latest+edu+exp+research+journal+conf+drafts+awards+training+skills+contact,[('news','Recent activities'),('education','Education'),('experience','Experience'),('research','Research'),('journals','Publications'),('conferences','Conferences'),('manuscripts','Manuscripts'),('awards','Honors'),('training','Education & training'),('skills','Skills'),('contact','Contact')],home=True)
+years=sorted({item['date_start'][:4] for item in NEWS},reverse=True)
+news_body=''.join(section('news-'+year,year,activity_cards([item for item in NEWS if item['date_start'].startswith(year)])) for year in years)
+page('news.html','News & activities',news_body,[('news-'+year,year) for year in years],description='Conference presentations, research milestones, awards and education. Photographs, posters and document previews accompany each activity; conference date ranges are marked where the individual presentation date is not recorded.')
 page('publications.html','Publications & presentations',journal+conf+drafts,[('journals','Journal publications'),('conferences','Conferences'),('manuscripts','Manuscripts')],description='Research in robot navigation, intelligent transportation and computer vision. Publication types and contribution status are listed with each entry.')
 page('projects.html','Research projects',section('projects','Selected work',projects()),[('projects','Selected work')]+[(p['id'],p['title'].split(' & ')[0]) for p in D['projects'][:6]],description='From infrastructure perception to communication-assisted robot navigation: research prototypes, field experiments and system integration.')
 page('achievements.html','Honors & education',awards+training+section('internship','Internship',records(D['experience'][1:])),[('awards','Honors & scholarships'),('training','Additional education'),('internship','Internship')],description='Academic and team awards, merit scholarships, and completed education programs.')
@@ -51,4 +69,4 @@ body=section('direction','Research direction','<p>I work on safe AMR navigation 
 body+=section('thesis','Master’s thesis research','<span class="badge">Research in progress</span><h3 class="thesis-title">A Study on Intersection Crossing Navigation for Autonomous Mobile Robots Using VLM-Based Intersection Context Understanding</h3><p>Advisor: Prof. Inhi Kim · KAIST</p><p>The research plan investigates pedestrians, vehicles, crosswalk occupancy and occlusion using infrastructure-camera images. The goal is to inform robot waiting, entry and crossing decisions, with evaluation across lighting and mixed-traffic scenarios.</p>')
 body+=section('related','Related implementation','<p>Field-tested SPaT crossing decisions, LiDAR navigation, a delivery robot digital twin, and earlier multi-camera tracking and LLM-guided planning experiments.</p><a class="text-link" href="projects.html">Explore the projects ↗</a>')
 page('research.html','Robot navigation with infrastructure intelligence',body,[('direction','Research direction'),('thesis','Master’s thesis'),('related','Implementation')],description='Connecting communication, navigation and scene understanding for autonomous mobile robots in urban intersections.')
-print('Built 5 static pages from data/cv.json')
+print('Built 6 static pages from data/cv.json and data/news.json')
